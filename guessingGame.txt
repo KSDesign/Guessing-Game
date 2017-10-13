@@ -1,0 +1,54 @@
+guessingGame.txt
+Text items file for the code-guessing program.
+========================================
+Program Description
+This is a guessing-game program. In the usual case the computer will first
+choose a random 4-digit integer containing only digits in the range 1..8.
+Repetition of digits is allowed. This is the computer's "secret code".
+
+The user will then have up to 10 chances to guess this secret code. Each guess
+the user makes is scored by the computer against the computer's secret code,
+and the user is then informed of that score. The user can use this scoring
+information to help with subsequent guesses.
+
+Each score computed by the program consists of exactly two digits:
+
+- The first digit indicates the number of digits in the user's guess that
+  exactly match the digits in the computer's secret code. To be an exact match,
+  the digits must be the same and also be in the same position in the code.
+
+- The second digit counts the number of digits in the user's guess that are
+  the same as a digit in the computer's secret code, but are not in the same
+  position. In this count, any digit in the guess must be compared with only
+  one instance of itself in the computer's code.
+        
+Thus a perfect score is 40, and 00 indicates no matches at all.
+
+                                                                 Screen 1 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+And, for example, if the secret code is 6234 and the user's guess is 5266, the
+score is 11. The first 1 counts the digit 2, which is an exact match, and the
+second 1 counts one of the 6's in the user's guess, which is the same as the
+one 6 in the secret code.
+        
+For purposes of testing and/or practice, the program also allows the user to
+enter the secret code, which will therefore not be a secret at all. This
+will, however, permit the user to verfify the scores computed by the program
+as they are displayed.
+        
+If the user enters such a secret code, a check is made to make sure the code
+is a valid one. Otherwise, an appropriate message is displayed and the program
+terminates. No other error checking is performed.
+        
+More examples of the score when a guess is scored against a code:
+        
+  Secret Code    Guess    Score      Secret Code    Guess    Score
+      1234        1234     40            1234        7157     01
+      1234        6578     00            1234        1386     11
+      1234        4321     04            1234        1432     22
+      1234        6674     10            6132        1353     02
+
+                                                                 Screen 1 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----------------------------------------
+========================================
